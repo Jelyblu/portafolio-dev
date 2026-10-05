@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO · Angelina Builes</title>
+    <meta name="description" content="Portafolio · Desarrolladora de videojuegos · Roblox · UEFN · Unity · Angelina Builes. World Cup TGC, Trident X Jungle, Ecovilla 4D, Rooftop Visa, Baby Fresh: Sueños de Colores, Bubble Hero, Chrono Leaf, Myth Pets y SodaRocket Challenge.">
+    <link rel="canonical" href="https://jelyblu.github.io/portafolio-dev/es/">
+    <link rel="alternate" hreflang="es" href="https://jelyblu.github.io/portafolio-dev/es/">
+    <link rel="alternate" hreflang="en" href="https://jelyblu.github.io/portafolio-dev/en/">
+    <link rel="alternate" hreflang="x-default" href="https://jelyblu.github.io/portafolio-dev/es/">
+    <meta property="og:title" content="PORTAFOLIO · Angelina Builes">
+    <meta property="og:description" content="Portafolio · Desarrolladora de videojuegos · Roblox · UEFN · Unity · Angelina Builes. World Cup TGC, Trident X Jungle, Ecovilla 4D, Rooftop Visa, Baby Fresh: Sueños de Colores, Bubble Hero, Chrono Leaf, Myth Pets y SodaRocket Challenge.">
+    <meta property="og:image" content="https://jelyblu.github.io/portafolio-dev/assets/img/worldcup-1.jpg">
+    <meta property="og:type" content="profile">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .profile-page {
+            --ab-cyan: #00e5ff; --ab-ink: #e8eeff; --ab-dim: #8f9cbc; --ab-faint: #5d6a8a;
+            --ab-line: rgba(255, 255, 255, .09); --ab-surface: #0e1017; --ab-raised: #12141f;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .profile-page h1, .profile-page h2, .profile-page h3 { font-family: 'Exo 2', sans-serif; }
+        .ab-notch { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%); }
+
+        .ab-hero { padding: 8.5rem 0 3.5rem; }
+        .ab-hero-grid { max-width: 900px; }
+        .ab-eyebrow {
+            font-family: 'Exo 2', sans-serif; font-size: .7rem; font-weight: 900; font-style: italic;
+            text-transform: uppercase; letter-spacing: .18em; color: var(--ab-cyan); margin: 0 0 1.1rem;
+        }
+        .ab-name { font-size: clamp(2.6rem, 7vw, 4.4rem); font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -.02em; line-height: .95; margin: 0 0 .9rem; color: var(--ab-ink); }
+        .ab-role { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 700; color: var(--ab-cyan); line-height: 1.5; margin: 0 0 .7rem; }
+        .ab-meta { font-size: .88rem; color: var(--ab-faint); line-height: 1.7; margin: 0 0 1.5rem; }
+        .ab-links { display: flex; flex-wrap: wrap; gap: 1.4rem 1.1rem; }
+
+        .ab-work { padding: 3rem 0 0; }
+        .ab-featured { display: grid; gap: 1.5rem; }
+        .ab-feat {
+            display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+            background: var(--ab-surface); border: 1px solid var(--ab-line);
+            border-top: 1px solid rgba(0, 229, 255, .32);
+            transition: border-color .25s ease, transform .25s ease;
+            scroll-margin-top: 90px;
+        }
+        .ab-feat:hover { border-top-color: var(--ab-cyan); transform: translateY(-3px); }
+
+        /* Galería: la primera captura manda, las demás van en tira debajo,
+           igual que la columna de imágenes de cada página del PDF. */
+        .ab-shot {
+            display: grid; grid-template-rows: minmax(230px, 1fr) 120px; background: var(--ab-raised);
+            border-right: 1px solid var(--ab-line); overflow: hidden;
+        }
+        .ab-shot a { display: block; height: 100%; overflow: hidden; }
+        .ab-shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+        .ab-shot a:hover img { transform: scale(1.04); }
+        /* La captura principal no empuja la altura: rellena lo que mida el texto.
+           Sin esto una captura vertical estira la tarjeta a más de 1000 px. */
+        .ab-shot-main { min-height: 0; position: relative; }
+        .ab-shot-main > a { position: absolute; inset: 0; }
+        .ab-shot--solo { grid-template-rows: minmax(260px, 1fr); }
+        /* Proyectos de móvil: las capturas son verticales y en una tira baja
+           solo se vería una franja. Se les da más alto. */
+        .ab-shot--movil { grid-template-rows: minmax(200px, 1fr) 240px; }
+        .ab-shot--movil .ab-shot-strip img { object-position: center top; }
+        .ab-shot-strip { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 1px; background: var(--ab-line); min-height: 0; border-top: 1px solid var(--ab-line); }
+
+        .ab-feat-body { padding: 2rem 2.2rem; }
+        .ab-feat h3 { font-size: 1.5rem; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -.01em; color: var(--ab-ink); margin: 0 0 .45rem; }
+        .ab-context { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ab-cyan); margin: 0 0 1.3rem; }
+        .ab-desc p { margin: 0 0 .9rem; font-size: .92rem; line-height: 1.75; color: var(--ab-dim); text-wrap: pretty; }
+        .ab-label {
+            font-family: 'Exo 2', sans-serif; font-size: .64rem; font-weight: 900; font-style: italic;
+            text-transform: uppercase; letter-spacing: .1em; color: var(--ab-faint); margin: 1.4rem 0 .55rem;
+        }
+        .ab-tech { display: flex; flex-wrap: wrap; gap: .3rem; }
+        .ab-tech span {
+            font-family: 'JetBrains Mono', monospace; font-size: .68rem; padding: .25rem .6rem;
+            border: 1px solid rgba(0, 229, 255, .26); color: var(--ab-cyan); letter-spacing: .03em;
+        }
+        .ab-out { display: inline-flex; gap: .35rem; margin-top: 1.3rem; margin-right: 1.4rem; color: var(--ab-ink); text-decoration: none; font-size: .84rem; font-weight: 700; border-bottom: 1px solid rgba(0, 229, 255, .4); padding-bottom: 2px; }
+        .ab-out:hover { color: var(--ab-cyan); border-bottom-color: var(--ab-cyan); }
+
+        .ab-rol { font-size: .9rem; font-weight: 700; color: var(--ab-ink); margin: 0 0 1.1rem; }
+        .ab-intro { max-width: 68ch; color: var(--ab-dim); line-height: 1.8; font-size: .98rem; margin: 1.2rem 0 1.8rem; text-wrap: pretty; }
+        .ab-eng { padding: 4rem 0 0; }
+        .ab-eng h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 900; font-style: italic; text-transform: uppercase; color: var(--ab-ink); margin: 0 0 1.6rem; }
+        .ab-eng-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .ab-eng-card { background: var(--ab-surface); border: 1px solid var(--ab-line); border-top: 2px solid var(--ab-cyan); padding: 1.8rem 2rem; }
+        .ab-eng-card h3 { font-family: 'Exo 2', sans-serif; font-size: 1.05rem; font-weight: 900; font-style: italic; text-transform: uppercase; color: var(--ab-ink); margin: 0 0 .7rem; }
+        .ab-eng-card p { margin: 0; font-size: .92rem; line-height: 1.75; color: var(--ab-dim); }
+        .ab-cta { padding: 5rem 0 6rem; }
+        .ab-cta-inner {
+            border: 1px solid rgba(0, 229, 255, .28); border-top: 2px solid var(--ab-cyan);
+            background: radial-gradient(90% 140% at 50% 0%, rgba(0, 229, 255, .1) 0%, rgba(0, 229, 255, 0) 60%), var(--ab-surface);
+            padding: 3rem 2.5rem; text-align: center;
+        }
+        .ab-cta-inner h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 900; font-style: italic; text-transform: uppercase; color: var(--ab-ink); margin: 0 0 .8rem; }
+        .ab-cta-inner p { color: var(--ab-dim); max-width: 56ch; margin: 0 auto 2rem; line-height: 1.8; font-size: .95rem; }
+        .ab-cta-inner .ab-links { justify-content: center; }
+
+        /* Sin logo del estudio: el nombre ocupa el centro de la cabecera. */
+        .logo-container .logo-text { text-transform: uppercase; font-style: italic; }
+
+        @media (max-width: 900px) {
+            .ab-feat { grid-template-columns: 1fr; }
+            .ab-shot { border-right: 0; border-bottom: 1px solid var(--ab-line); }
+        }
+        @media (max-width: 600px) {
+            .ab-hero { padding: 7rem 0 2.5rem; }
+            .ab-feat-body { padding: 1.6rem 1.4rem; }
+            .ab-cta-inner { padding: 2.2rem 1.4rem; }
+            .ab-shot { grid-template-rows: 220px 90px; }
+            .ab-shot--movil { grid-template-rows: 200px 180px; }
+            .ab-shot--solo { grid-template-rows: 220px; }
+            .logo-container .logo-text { font-size: 1rem; }
+        }
+
+        .ab-vmodal { width: min(92vw, 960px); margin: auto; padding: 0; border: 1px solid var(--ab-line); border-radius: 4px; background: var(--ab-raised); overflow: visible; }
+        .ab-vmodal::backdrop { background: rgba(4, 8, 16, .84); backdrop-filter: blur(6px); }
+        .ab-vmodal-inner { position: relative; aspect-ratio: 16 / 9; }
+        .ab-vmodal iframe { display: block; width: 100%; height: 100%; border: 0; background: #000; }
+        .ab-vclose { position: absolute; top: -17px; right: -17px; width: 42px; height: 42px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--ab-cyan); color: #04121a; font-size: 1.6rem; font-weight: 700; line-height: 1; cursor: pointer; box-shadow: 0 6px 18px rgba(0, 0, 0, .55); z-index: 1; }
+        .ab-vclose:hover { filter: brightness(1.12); }
+        .ab-vclose:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+        @media (max-width: 560px) { .ab-vclose { top: 8px; right: 8px; } }
+
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(1) > a { animation-delay: 40ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(2) > a { animation-delay: 84ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(3) > a { animation-delay: 128ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(4) > a { animation-delay: 172ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(5) > a { animation-delay: 216ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(6) > a { animation-delay: 260ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(7) > a { animation-delay: 304ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(8) > a { animation-delay: 348ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(9) > a { animation-delay: 392ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(10) > a { animation-delay: 436ms; }
+        #primary-navigation[data-visible="true"] .nav-links > li:nth-child(11) > a { animation-delay: 480ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(1) > a { animation-delay: 280ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(2) > a { animation-delay: 252ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(3) > a { animation-delay: 224ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(4) > a { animation-delay: 196ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(5) > a { animation-delay: 168ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(6) > a { animation-delay: 140ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(7) > a { animation-delay: 112ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(8) > a { animation-delay: 84ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(9) > a { animation-delay: 56ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(10) > a { animation-delay: 28ms; }
+        #primary-navigation[data-visible="false"] .nav-links > li:nth-child(11) > a { animation-delay: 0ms; }
+    </style>
+</head>
+
+<body>
+    <header id="main-header" class="scrolled">
+        <div class="container nav-wrapper">
+            <a href="#top" class="logo-container"><span class="logo-text">Angelina Builes</span></a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger"></div>
+            </button>
+            <nav id="primary-navigation">
+                <ul class="nav-links">
+                    <li><a href="#worldcup">World Cup TGC</a></li>
+                    <li><a href="#trident">Trident X Jungle</a></li>
+                    <li><a href="#ecovilla">Ecovilla 4D</a></li>
+                    <li><a href="#rooftop">Rooftop Visa</a></li>
+                    <li><a href="#babyfresh">Baby Fresh: Sueños de Colores</a></li>
+                    <li><a href="#bubblehero">Bubble Hero</a></li>
+                    <li><a href="#chronoleaf">Chrono Leaf</a></li>
+                    <li><a href="#mythpets">Myth Pets y SodaRocket Challenge</a></li>
+                    <li><a href="#ingenieria">Ingeniería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="../en/" hreflang="en" lang="en">English</a></li>
+                </ul>
+            </nav>
+            <a class="nav-cta" href="../en/" hreflang="en" lang="en">English</a>
+        </div>
+    </header>
+
+    <main class="profile-page" id="top">
+        <section class="ab-hero">
+            <div class="container">
+                <div class="ab-hero-grid">
+                    <p class="ab-eyebrow">Desarrolladora de videojuegos · Roblox · UEFN · Unity</p>
+                    <h1 class="ab-name">Angelina Builes</h1>
+                    <p class="ab-role">PORTAFOLIO 2026</p>
+                    <p class="ab-meta">AngelinaBuilesC@gmail.com | 301 371 35 18 | Medellín - Colombia</p>
+                    <p class="ab-intro">Construyo los sistemas vivos sobre los que funciona un juego una vez publicado: economía, gacha, compras, progresión y guardado, y los llevo desde la especificación hasta el lanzamiento. Publico títulos propios desde 2019 y trabajo en proyectos de cliente en Roblox, UEFN y Unity desde 2022, normalmente como parte de un equipo pequeño. Cofundadora de Dragonark Studios.</p>
+                    <div class="ab-links">
+                        <a class="btn btn-primary" href="mailto:AngelinaBuilesC@gmail.com">Contáctame</a>
+                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/angelinabuiles" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="btn btn-secondary" href="https://github.com/Jelyblu" target="_blank" rel="noopener">GitHub</a>
+                        <a class="btn btn-secondary" href="https://dragonarkstudios.itch.io" target="_blank" rel="noopener">itch.io</a>
+                        <a class="btn btn-secondary" href="https://www.fiverr.com/angibuiles" target="_blank" rel="noopener">Fiverr</a>
+                        <a class="btn btn-secondary" href="https://dragonarkstudios.com/es/portfolio" target="_blank" rel="noopener">Portafolio del estudio</a>
+                        <a class="btn btn-secondary" href="https://jelyblu.github.io/portafolio-qa/es/">Portafolio de QA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-work">
+            <div class="container">
+                <h2 class="sr-only">PORTAFOLIO</h2>
+                <div class="ab-featured">
+                    <article class="ab-feat" id="worldcup">
+                        <div class="ab-shot ab-shot--solo">
+                            <div class="ab-shot-main"><a href="../assets/img/worldcup-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/worldcup-1.jpg" alt="World Cup TGC, captura 1" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>World Cup TGC</h3>
+                            <p class="ab-context">En vivo en Roblox · Sunset Games Studio · 2026</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora Roblox (Luau): sistemas del servidor</p>
+                            <div class="ab-desc">
+                                <p>Construí toda la capa de live-ops de un juego de colección de cartas de fútbol: economía de monedas con analítica de entradas y salidas, sobres con sistema de pity, compras dentro del juego con recibos idempotentes, pase de álbum, recompensas diarias, ingreso pasivo y sin conexión con topes AFK, cosméticos, insignias y referidos, además de un tutorial de varias fases con métricas de embudo.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>Roblox</span><span>Luau</span><span>DataStore</span><span>Live-ops</span></div>
+                            
+                            <a class="ab-out" href="https://www.roblox.com/games/85777478388615/World-Cup-TGC" target="_blank" rel="noopener">Juégalo en Roblox &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="trident">
+                        <div class="ab-shot">
+                            <div class="ab-shot-main"><a href="../assets/img/trident-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/trident-1.jpg" alt="Trident X Jungle, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/trident-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/trident-2.jpg" alt="Trident X Jungle, captura 2" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Trident X Jungle</h3>
+                            <p class="ab-context">UEFN · evento mundial de marca para Trident (Mondelez)</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora principal y diseñadora de niveles</p>
+                            <div class="ab-desc">
+                                <p>Construí una isla propia en Fortnite con cuatro minijuegos conectados: una carrera contrarreloj, un cuarto de escape, retos de parkour y una batalla final contra un científico loco y sus secuaces, con mecánicas y progresión atadas al objetivo narrativo de recuperar la Fórmula X.</p>
+                                <p>Me encargué de todo el desarrollo y el diseño de niveles, y después lideré las pruebas que mantuvieron la isla estable durante un evento mundial.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>UEFN</span><span>Verse</span><span>Level design</span></div>
+                            
+                            <a class="ab-out" href="https://dragonarkstudios.com/assets/Portfolio/assets/TridentX.mp4" target="_blank" rel="noopener">Ver el video &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="ecovilla">
+                        <div class="ab-shot">
+                            <div class="ab-shot-main"><a href="../assets/img/ecovilla-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/ecovilla-1.jpg" alt="Ecovilla 4D, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/ecovilla-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/ecovilla-2.jpg" alt="Ecovilla 4D, captura 2" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Ecovilla 4D</h3>
+                            <p class="ab-context">Ecosistema XR multiplataforma · vivienda sostenible · con Ecopetrol y la UPB</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora: todo el código</p>
+                            <div class="ab-desc">
+                                <p>Construí varias experiencias conectadas alrededor de una casa sostenible del futuro: cinco apps web de realidad aumentada que se abren desde un código QR sin descargar nada, dos aplicaciones de realidad virtual (una réplica 1:1 de la casa y una meditación guiada), un recorrido web móvil cuyos minijuegos explicaban el funcionamiento de la ecovilla, un vídeo promocional hecho en Unreal Engine y una app para tablet con visualización 3D y efectos en tiempo real.</p>
+                                <p>También construí su asistente con IA, que corría tanto en el dispositivo como sobre la API de OpenAI, para responder las preguntas de los visitantes.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>Unity</span><span>Unreal Engine</span><span>WebAR</span><span>VR</span><span>OpenAI API</span></div>
+                            <a class="ab-out" href="https://youtu.be/UNXelOfm4Hc" data-yt="UNXelOfm4Hc" target="_blank" rel="noopener">Ver el video &rarr;</a>
+                            <a class="ab-out" href="https://jelyblu.github.io/EcoVillaVirtual/" target="_blank" rel="noopener">Juégalo en la web &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="rooftop">
+                        <div class="ab-shot">
+                            <div class="ab-shot-main"><a href="../assets/img/rooftop-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/rooftop-1.jpg" alt="Rooftop Visa, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/rooftop-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/rooftop-2.jpg" alt="Rooftop Visa, captura 2" loading="lazy"></a><a href="../assets/img/rooftop-3.jpg" target="_blank" rel="noopener"><img src="../assets/img/rooftop-3.jpg" alt="Rooftop Visa, captura 3" loading="lazy"></a><a href="../assets/img/rooftop-4.jpg" target="_blank" rel="noopener"><img src="../assets/img/rooftop-4.jpg" alt="Rooftop Visa, captura 4" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Rooftop Visa</h3>
+                            <p class="ab-context">VRChat · espacio virtual para eventos y lanzamientos de Visa</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora</p>
+                            <div class="ab-desc">
+                                <p>Un espacio virtual inmersivo para que Visa realice eventos en vivo: optimicé los modelos 3D y el rendimiento de la escena, afiné los sistemas interactivos y ejecuté las pruebas que mantuvieron el lugar estable y fluido con público adentro.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>VRChat</span><span>Unity</span><span>C#</span><span>Optimización</span></div>
+                            <a class="ab-out" href="https://www.youtube.com/watch?v=r58cvnKIQz0" data-yt="r58cvnKIQz0" target="_blank" rel="noopener">Ver el video &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="babyfresh">
+                        <div class="ab-shot ab-shot--movil">
+                            <div class="ab-shot-main"><a href="../assets/img/babyfresh-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/babyfresh-1.jpg" alt="Baby Fresh: Sueños de Colores, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/babyfresh-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/babyfresh-2.jpg" alt="Baby Fresh: Sueños de Colores, captura 2" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Baby Fresh: Sueños de Colores</h3>
+                            <p class="ab-context">Instalación físico-digital · exhibición en vivo</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora: sistemas de lo físico a lo digital</p>
+                            <div class="ab-desc">
+                                <p>Niños y niñas coloreaban un osito en papel, lo metían en una instalación con forma de horno y veían su propio dibujo cobrar vida en un mundo virtual compartido en una pantalla grande.</p>
+                                <p>Construí los sistemas que conectaban la interacción física con el resultado digital en tiempo real, cuidando que la traducción fuera fiel y que todo se mantuviera estable frente a un público de niños pequeños.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>Unity</span><span>Tiempo real</span><span>Instalación</span></div>
+                            
+                            <a class="ab-out" href="https://www.instagram.com/reel/DP_5Ftrjhip" target="_blank" rel="noopener">Ver el video &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="bubblehero">
+                        <div class="ab-shot ab-shot--movil">
+                            <div class="ab-shot-main"><a href="../assets/img/bubblehero-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/bubblehero-1.jpg" alt="Bubble Hero, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/bubblehero-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/bubblehero-2.jpg" alt="Bubble Hero, captura 2" loading="lazy"></a><a href="../assets/img/bubblehero-3.jpg" target="_blank" rel="noopener"><img src="../assets/img/bubblehero-3.jpg" alt="Bubble Hero, captura 3" loading="lazy"></a><a href="../assets/img/bubblehero-4.jpg" target="_blank" rel="noopener"><img src="../assets/img/bubblehero-4.jpg" alt="Bubble Hero, captura 4" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Bubble Hero</h3>
+                            <p class="ab-context">Juego propio · Android y Steam · Top 6 en la Global Game Jam UPB Medellín</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Cocreadora: gameplay</p>
+                            <div class="ab-desc">
+                                <p>Me encargué de los sistemas de juego, la progresión y el balance de dificultad de Bubble Hero, un juego de supervivencia por oleadas que llevamos de una build de 48 horas en la Global Game Jam a un lanzamiento público en Google Play y Steam.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>Unity</span><span>C#</span><span>Android</span><span>Steam</span></div>
+                            
+                            <a class="ab-out" href="https://store.steampowered.com/app/4517050/Bubble_Hero_The_Five_Elements/" target="_blank" rel="noopener">Ver en Steam &rarr;</a>
+                            <a class="ab-out" href="https://play.google.com/store/apps/details?id=com.DragonarkStudios.BubbleHero" target="_blank" rel="noopener">Ver en Google Play &rarr;</a>
+                            <a class="ab-out" href="https://dragonarkstudios.itch.io" target="_blank" rel="noopener">itch.io &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="chronoleaf">
+                        <div class="ab-shot">
+                            <div class="ab-shot-main"><a href="../assets/img/chronoleaf-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/chronoleaf-1.jpg" alt="Chrono Leaf, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/chronoleaf-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/chronoleaf-2.jpg" alt="Chrono Leaf, captura 2" loading="lazy"></a><a href="../assets/img/chronoleaf-3.jpg" target="_blank" rel="noopener"><img src="../assets/img/chronoleaf-3.jpg" alt="Chrono Leaf, captura 3" loading="lazy"></a><a href="../assets/img/chronoleaf-4.jpg" target="_blank" rel="noopener"><img src="../assets/img/chronoleaf-4.jpg" alt="Chrono Leaf, captura 4" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Chrono Leaf</h3>
+                            <p class="ab-context">Juego propio · MapleStory Worlds (Nexon) · 2025</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora</p>
+                            <div class="ab-desc">
+                                <p>Un juego de acción bullet heaven para la plataforma MapleStory Worlds: el jugador viaja por distintas eras, esquiva oleadas de enemigos y sube de nivel sus habilidades con artefactos para restaurar la línea temporal.</p>
+                                <p>Lo desarrollamos en Dragonark Studios dentro del MapleStory Worlds Creators&#x27; Workshop de Nexon America, un programa selectivo de 12 semanas, y se publicó en diciembre de 2025.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>MapleStory Worlds</span></div>
+                            
+                            <a class="ab-out" href="https://maplestoryworlds.nexon.com/en/play/3d6a207cc3444ceaa73492c0fd49bfeb/" target="_blank" rel="noopener">Juégalo en MapleStory Worlds &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="ab-feat" id="mythpets">
+                        <div class="ab-shot ab-shot--movil">
+                            <div class="ab-shot-main"><a href="../assets/img/mythpets-1.jpg" target="_blank" rel="noopener"><img src="../assets/img/mythpets-1.jpg" alt="Myth Pets y SodaRocket Challenge, captura 1" loading="lazy"></a></div>
+                            <div class="ab-shot-strip"><a href="../assets/img/mythpets-2.jpg" target="_blank" rel="noopener"><img src="../assets/img/mythpets-2.jpg" alt="Myth Pets y SodaRocket Challenge, captura 2" loading="lazy"></a><a href="../assets/img/mythpets-3.jpg" target="_blank" rel="noopener"><img src="../assets/img/mythpets-3.jpg" alt="Myth Pets y SodaRocket Challenge, captura 3" loading="lazy"></a><a href="../assets/img/mythpets-4.jpg" target="_blank" rel="noopener"><img src="../assets/img/mythpets-4.jpg" alt="Myth Pets y SodaRocket Challenge, captura 4" loading="lazy"></a><a href="../assets/img/mythpets-5.jpg" target="_blank" rel="noopener"><img src="../assets/img/mythpets-5.jpg" alt="Myth Pets y SodaRocket Challenge, captura 5" loading="lazy"></a></div>
+                        </div>
+                        <div class="ab-feat-body">
+                            <h3>Myth Pets y SodaRocket Challenge</h3>
+                            <p class="ab-context">Juegos propios · Google Play · 2019 y 2020</p>
+                            <p class="ab-label">Rol</p>
+                            <p class="ab-rol">Desarrolladora independiente</p>
+                            <div class="ab-desc">
+                                <p>Antes de Dragonark publiqué por mi cuenta dos títulos comerciales en Android, SodaRocket Challenge (2019) y Myth Pets (2020), encargándome del diseño, el desarrollo, las pruebas y la publicación en la tienda.</p>
+                            </div>
+                            <p class="ab-label">Tecnologías</p>
+                            <div class="ab-tech"><span>Unity</span><span>C#</span><span>Android</span></div>
+                            <a class="ab-out" href="https://www.youtube.com/watch?v=yEkY36VHkOU" data-yt="yEkY36VHkOU" target="_blank" rel="noopener">Ver el video &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-eng" id="ingenieria">
+            <div class="container">
+                <h2>Ingeniería más allá del gameplay</h2>
+                <div class="ab-eng-grid">
+                    <div class="ab-eng-card"><h3>IA y automatización</h3><p>Un bot agéntico sobre un modelo de lenguaje local que clasifica reportes de bugs en lenguaje natural y los registra por prioridad, y flujos de generación aumentada por recuperación (RAG) en producción sobre la API de OpenAI: recuperación de documentos y diseño de prompts.</p></div>
+                    <div class="ab-eng-card"><h3>CI/CD y backend</h3><p>Pipelines de CI/CD en GitHub Actions y Google Cloud Build que ejecutan pruebas automatizadas antes de cada despliegue. Backend sin servidor en Firebase Cloud Functions y AWS Lambda: endpoints REST, validación del lado del servidor y escrituras idempotentes. Endurecimiento web con CSP, HSTS y COOP.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ab-cta" id="contacto">
+            <div class="container">
+                <div class="ab-cta-inner ab-notch">
+                    <h2>¡GRACIAS!</h2>
+                    <p>AngelinaBuilesC@gmail.com | 301 371 35 18 | Medellín - Colombia</p>
+                    <div class="ab-links">
+                        <a class="btn btn-primary" href="mailto:AngelinaBuilesC@gmail.com">AngelinaBuilesC@gmail.com</a>
+                        <a class="btn btn-secondary" href="tel:+573013713518">301 371 35 18</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>AngelinaBuilesC@gmail.com | 301 371 35 18 | Medellín - Colombia</p>
+        </div>
+    </footer>
+
+    <dialog id="ab-vmodal" class="ab-vmodal">
+        <div class="ab-vmodal-inner">
+            <button type="button" class="ab-vclose" data-ab-vclose>
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Cerrar video</span>
+            </button>
+            <iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </dialog>
+
+    <script>
+        (function () {
+            // Menú: el mismo mecanismo que usa main.js en Dragonark.
+            var toggle = document.querySelector('.mobile-nav-toggle');
+            var nav = document.getElementById('primary-navigation');
+            function setMenu(open) {
+                nav.setAttribute('data-visible', open ? 'true' : 'false');
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            toggle.addEventListener('click', function () {
+                setMenu(nav.getAttribute('data-visible') !== 'true');
+            });
+            nav.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', function () { setMenu(false); });
+            });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+            // Video en ventana: YouTube sin cookies. Sin JS, el enlace abre YouTube.
+            var modal = document.getElementById('ab-vmodal');
+            if (!modal || !modal.showModal) return;
+            var frame = modal.querySelector('iframe');
+            document.querySelectorAll('a[data-yt]').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                    e.preventDefault();
+                    frame.src = 'https://www.youtube-nocookie.com/embed/' + link.getAttribute('data-yt') + '?autoplay=1&rel=0';
+                    modal.showModal();
+                });
+            });
+            modal.querySelector('[data-ab-vclose]').addEventListener('click', function () { modal.close(); });
+            modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+            modal.addEventListener('close', function () { frame.src = 'about:blank'; });
+        })();
+    </script>
+</body>
+
+</html>

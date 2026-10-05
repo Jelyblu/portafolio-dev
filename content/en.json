@@ -1,0 +1,195 @@
+{
+  "portada": {
+    "titulo": "PORTFOLIO",
+    "subtitulo": "Game Developer · Roblox · UEFN · Unity",
+    "anio": "2026",
+    "ciudad": "Medellín - Colombia",
+    "telefono": "301 371 35 18",
+    "intro": "I build the live systems a game runs on once it's public: economy, gacha, purchases, progression and save data, and I take them from spec to release. Publishing my own titles since 2019 and building client work on Roblox, UEFN and Unity since 2022, usually as part of a small team. Co-founder of Dragonark Studios."
+  },
+  "etiquetas": {
+    "apps": "Tech",
+    "video": "Watch the video",
+    "descarga": "Download it here",
+    "cierre": "THANK YOU!",
+    "web": "Play the web version",
+    "isla": "See the island"
+  },
+  "ingenieria": {
+    "titulo": "Engineering beyond gameplay",
+    "menu": "Engineering",
+    "bloques": [
+      {
+        "titulo": "AI & automation",
+        "texto": "An agentic bot on a local large language model that classifies natural-language bug reports and files them by priority, plus retrieval-augmented generation flows running in production on the OpenAI API: document retrieval and prompt design."
+      },
+      {
+        "titulo": "CI/CD & backend",
+        "texto": "CI/CD pipelines on GitHub Actions and Google Cloud Build that run automated tests before every deploy. Serverless backends on Firebase Cloud Functions and AWS Lambda: REST endpoints, server-side validation and idempotent writes. Web hardening with CSP, HSTS and COOP."
+      }
+    ]
+  },
+  "proyectos": [
+    {
+      "id": "worldcup",
+      "titulo": "World Cup TGC",
+      "tipo": "Live on Roblox · Sunset Games Studio · 2026",
+      "rol": "Roblox developer (Luau): server-side systems",
+      "parrafos": [
+        "I built a full live-ops layer for a football card-collecting game: coin economy with sources and sinks analytics, pack gacha with pity counters, in-game purchases with receipt idempotency, album pass, daily rewards, idle and offline income with AFK caps, cosmetics, badges and referrals, plus a multi-phase onboarding tutorial with funnel metrics."
+      ],
+      "apps": [
+        "Roblox",
+        "Luau",
+        "DataStore",
+        "Live-ops"
+      ],
+      "enlaces": [
+        [
+          "Play it on Roblox",
+          "https://www.roblox.com/games/85777478388615/World-Cup-TGC"
+        ]
+      ]
+    },
+    {
+      "id": "trident",
+      "titulo": "Trident X Jungle",
+      "tipo": "UEFN · worldwide brand event for Trident (Mondelez)",
+      "rol": "Lead developer and level designer",
+      "parrafos": [
+        "I built a custom Fortnite island with four interconnected minigames: a time-trial race, an escape room, parkour challenges and a final boss battle against a mad scientist and his minions, tying mechanics and progression to the narrative goal of recovering the Formula X.",
+        "I ran the full development and level design, then led the testing that kept the island stable through a worldwide event."
+      ],
+      "apps": [
+        "UEFN",
+        "Verse",
+        "Level design"
+      ],
+      "enlaces": [
+        [
+          "Watch the video",
+          "https://dragonarkstudios.com/assets/Portfolio/assets/TridentX.mp4"
+        ]
+      ]
+    },
+    {
+      "id": "ecovilla",
+      "titulo": "Ecovilla 4D",
+      "tipo": "Multi-platform XR ecosystem · sustainable housing · with Ecopetrol & UPB",
+      "rol": "Developer: the entire codebase",
+      "parrafos": [
+        "I built several interconnected experiences around one sustainable house of the future: five web augmented reality apps opened from a QR code with no app download, two VR applications (a 1:1 replica of the house and a guided meditation), an interactive mobile web journey whose minigames explained how the ecovilla works, a promotional film built in Unreal Engine, and a tablet app with 3D visualization and real-time effects.",
+        "I also built its AI assistant, running both on the device and on the OpenAI API, to answer visitors' questions."
+      ],
+      "apps": [
+        "Unity",
+        "Unreal Engine",
+        "WebAR",
+        "VR",
+        "OpenAI API"
+      ],
+      "video": "https://youtu.be/UNXelOfm4Hc",
+      "web": "https://jelyblu.github.io/EcoVillaVirtual/"
+    },
+    {
+      "id": "rooftop",
+      "titulo": "Rooftop Visa",
+      "tipo": "VRChat · virtual venue for Visa events and product launches",
+      "rol": "Developer",
+      "parrafos": [
+        "An immersive virtual space for Visa to host live events: I optimized the 3D assets and scene performance, refined the interactive systems, and ran the testing that kept the venue stable and smooth with an audience inside it."
+      ],
+      "apps": [
+        "VRChat",
+        "Unity",
+        "C#",
+        "Optimization"
+      ],
+      "video": "https://www.youtube.com/watch?v=r58cvnKIQz0"
+    },
+    {
+      "id": "babyfresh",
+      "titulo": "Baby Fresh: Sueños de Colores",
+      "tipo": "Physical-digital installation · live exhibition",
+      "rol": "Developer: physical-to-digital systems",
+      "parrafos": [
+        "Children coloured a paper bear, placed it into a playful “oven” installation, and watched their own drawing come alive in a shared virtual world on a big screen.",
+        "I built the systems connecting the physical interaction to the real-time digital result, making sure the translation was faithful and the whole thing stayed stable in front of a live audience of small children."
+      ],
+      "apps": [
+        "Unity",
+        "Real-time",
+        "Installation"
+      ],
+      "enlaces": [
+        [
+          "Watch the video",
+          "https://www.instagram.com/reel/DP_5Ftrjhip"
+        ]
+      ]
+    },
+    {
+      "id": "bubblehero",
+      "titulo": "Bubble Hero",
+      "tipo": "Own game · Android & Steam · Top 6 at Global Game Jam UPB Medellín",
+      "rol": "Co-creator: gameplay",
+      "parrafos": [
+        "I owned the gameplay systems, progression and difficulty balance for Bubble Hero, a wave-survival game we took from a 48-hour Global Game Jam build to a public release on Google Play and Steam."
+      ],
+      "apps": [
+        "Unity",
+        "C#",
+        "Android",
+        "Steam"
+      ],
+      "enlaces": [
+        [
+          "See it on Steam",
+          "https://store.steampowered.com/app/4517050/Bubble_Hero_The_Five_Elements/"
+        ],
+        [
+          "See it on Google Play",
+          "https://play.google.com/store/apps/details?id=com.DragonarkStudios.BubbleHero"
+        ],
+        [
+          "itch.io",
+          "https://dragonarkstudios.itch.io"
+        ]
+      ]
+    },
+    {
+      "id": "chronoleaf",
+      "titulo": "Chrono Leaf",
+      "tipo": "Own game · MapleStory Worlds (Nexon) · 2025",
+      "rol": "Developer",
+      "parrafos": [
+        "A bullet heaven action game for the MapleStory Worlds platform: the player travels across different eras, dodges waves of enemies and levels up their skills with artifacts to restore the timeline.",
+        "We developed it at Dragonark Studios as part of Nexon America's MapleStory Worlds Creators' Workshop, a selective 12-week program, and it was released in December 2025."
+      ],
+      "apps": [
+        "MapleStory Worlds"
+      ],
+      "enlaces": [
+        [
+          "Play it on MapleStory Worlds",
+          "https://maplestoryworlds.nexon.com/en/play/3d6a207cc3444ceaa73492c0fd49bfeb/"
+        ]
+      ]
+    },
+    {
+      "id": "mythpets",
+      "titulo": "Myth Pets & SodaRocket Challenge",
+      "tipo": "Own games · Google Play · 2019 and 2020",
+      "rol": "Independent developer",
+      "parrafos": [
+        "Before Dragonark I self-published two commercial Android titles, SodaRocket Challenge (2019) and Myth Pets (2020), handling design, development, testing and store release on my own."
+      ],
+      "apps": [
+        "Unity",
+        "C#",
+        "Android"
+      ],
+      "video": "https://www.youtube.com/watch?v=yEkY36VHkOU"
+    }
+  ]
+}

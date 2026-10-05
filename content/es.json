@@ -1,0 +1,195 @@
+{
+  "portada": {
+    "titulo": "PORTAFOLIO",
+    "subtitulo": "Desarrolladora de videojuegos · Roblox · UEFN · Unity",
+    "anio": "2026",
+    "ciudad": "Medellín - Colombia",
+    "telefono": "301 371 35 18",
+    "intro": "Construyo los sistemas vivos sobre los que funciona un juego una vez publicado: economía, gacha, compras, progresión y guardado, y los llevo desde la especificación hasta el lanzamiento. Publico títulos propios desde 2019 y trabajo en proyectos de cliente en Roblox, UEFN y Unity desde 2022, normalmente como parte de un equipo pequeño. Cofundadora de Dragonark Studios."
+  },
+  "etiquetas": {
+    "apps": "Tecnologías",
+    "video": "Ver el video",
+    "descarga": "Descárgalo aquí",
+    "cierre": "¡GRACIAS!",
+    "web": "Juégalo en la web",
+    "isla": "Ver la isla"
+  },
+  "ingenieria": {
+    "titulo": "Ingeniería más allá del gameplay",
+    "menu": "Ingeniería",
+    "bloques": [
+      {
+        "titulo": "IA y automatización",
+        "texto": "Un bot agéntico sobre un modelo de lenguaje local que clasifica reportes de bugs en lenguaje natural y los registra por prioridad, y flujos de generación aumentada por recuperación (RAG) en producción sobre la API de OpenAI: recuperación de documentos y diseño de prompts."
+      },
+      {
+        "titulo": "CI/CD y backend",
+        "texto": "Pipelines de CI/CD en GitHub Actions y Google Cloud Build que ejecutan pruebas automatizadas antes de cada despliegue. Backend sin servidor en Firebase Cloud Functions y AWS Lambda: endpoints REST, validación del lado del servidor y escrituras idempotentes. Endurecimiento web con CSP, HSTS y COOP."
+      }
+    ]
+  },
+  "proyectos": [
+    {
+      "id": "worldcup",
+      "titulo": "World Cup TGC",
+      "tipo": "En vivo en Roblox · Sunset Games Studio · 2026",
+      "rol": "Desarrolladora Roblox (Luau): sistemas del servidor",
+      "parrafos": [
+        "Construí toda la capa de live-ops de un juego de colección de cartas de fútbol: economía de monedas con analítica de entradas y salidas, sobres con sistema de pity, compras dentro del juego con recibos idempotentes, pase de álbum, recompensas diarias, ingreso pasivo y sin conexión con topes AFK, cosméticos, insignias y referidos, además de un tutorial de varias fases con métricas de embudo."
+      ],
+      "apps": [
+        "Roblox",
+        "Luau",
+        "DataStore",
+        "Live-ops"
+      ],
+      "enlaces": [
+        [
+          "Juégalo en Roblox",
+          "https://www.roblox.com/games/85777478388615/World-Cup-TGC"
+        ]
+      ]
+    },
+    {
+      "id": "trident",
+      "titulo": "Trident X Jungle",
+      "tipo": "UEFN · evento mundial de marca para Trident (Mondelez)",
+      "rol": "Desarrolladora principal y diseñadora de niveles",
+      "parrafos": [
+        "Construí una isla propia en Fortnite con cuatro minijuegos conectados: una carrera contrarreloj, un cuarto de escape, retos de parkour y una batalla final contra un científico loco y sus secuaces, con mecánicas y progresión atadas al objetivo narrativo de recuperar la Fórmula X.",
+        "Me encargué de todo el desarrollo y el diseño de niveles, y después lideré las pruebas que mantuvieron la isla estable durante un evento mundial."
+      ],
+      "apps": [
+        "UEFN",
+        "Verse",
+        "Level design"
+      ],
+      "enlaces": [
+        [
+          "Ver el video",
+          "https://dragonarkstudios.com/assets/Portfolio/assets/TridentX.mp4"
+        ]
+      ]
+    },
+    {
+      "id": "ecovilla",
+      "titulo": "Ecovilla 4D",
+      "tipo": "Ecosistema XR multiplataforma · vivienda sostenible · con Ecopetrol y la UPB",
+      "rol": "Desarrolladora: todo el código",
+      "parrafos": [
+        "Construí varias experiencias conectadas alrededor de una casa sostenible del futuro: cinco apps web de realidad aumentada que se abren desde un código QR sin descargar nada, dos aplicaciones de realidad virtual (una réplica 1:1 de la casa y una meditación guiada), un recorrido web móvil cuyos minijuegos explicaban el funcionamiento de la ecovilla, un vídeo promocional hecho en Unreal Engine y una app para tablet con visualización 3D y efectos en tiempo real.",
+        "También construí su asistente con IA, que corría tanto en el dispositivo como sobre la API de OpenAI, para responder las preguntas de los visitantes."
+      ],
+      "apps": [
+        "Unity",
+        "Unreal Engine",
+        "WebAR",
+        "VR",
+        "OpenAI API"
+      ],
+      "video": "https://youtu.be/UNXelOfm4Hc",
+      "web": "https://jelyblu.github.io/EcoVillaVirtual/"
+    },
+    {
+      "id": "rooftop",
+      "titulo": "Rooftop Visa",
+      "tipo": "VRChat · espacio virtual para eventos y lanzamientos de Visa",
+      "rol": "Desarrolladora",
+      "parrafos": [
+        "Un espacio virtual inmersivo para que Visa realice eventos en vivo: optimicé los modelos 3D y el rendimiento de la escena, afiné los sistemas interactivos y ejecuté las pruebas que mantuvieron el lugar estable y fluido con público adentro."
+      ],
+      "apps": [
+        "VRChat",
+        "Unity",
+        "C#",
+        "Optimización"
+      ],
+      "video": "https://www.youtube.com/watch?v=r58cvnKIQz0"
+    },
+    {
+      "id": "babyfresh",
+      "titulo": "Baby Fresh: Sueños de Colores",
+      "tipo": "Instalación físico-digital · exhibición en vivo",
+      "rol": "Desarrolladora: sistemas de lo físico a lo digital",
+      "parrafos": [
+        "Niños y niñas coloreaban un osito en papel, lo metían en una instalación con forma de horno y veían su propio dibujo cobrar vida en un mundo virtual compartido en una pantalla grande.",
+        "Construí los sistemas que conectaban la interacción física con el resultado digital en tiempo real, cuidando que la traducción fuera fiel y que todo se mantuviera estable frente a un público de niños pequeños."
+      ],
+      "apps": [
+        "Unity",
+        "Tiempo real",
+        "Instalación"
+      ],
+      "enlaces": [
+        [
+          "Ver el video",
+          "https://www.instagram.com/reel/DP_5Ftrjhip"
+        ]
+      ]
+    },
+    {
+      "id": "bubblehero",
+      "titulo": "Bubble Hero",
+      "tipo": "Juego propio · Android y Steam · Top 6 en la Global Game Jam UPB Medellín",
+      "rol": "Cocreadora: gameplay",
+      "parrafos": [
+        "Me encargué de los sistemas de juego, la progresión y el balance de dificultad de Bubble Hero, un juego de supervivencia por oleadas que llevamos de una build de 48 horas en la Global Game Jam a un lanzamiento público en Google Play y Steam."
+      ],
+      "apps": [
+        "Unity",
+        "C#",
+        "Android",
+        "Steam"
+      ],
+      "enlaces": [
+        [
+          "Ver en Steam",
+          "https://store.steampowered.com/app/4517050/Bubble_Hero_The_Five_Elements/"
+        ],
+        [
+          "Ver en Google Play",
+          "https://play.google.com/store/apps/details?id=com.DragonarkStudios.BubbleHero"
+        ],
+        [
+          "itch.io",
+          "https://dragonarkstudios.itch.io"
+        ]
+      ]
+    },
+    {
+      "id": "chronoleaf",
+      "titulo": "Chrono Leaf",
+      "tipo": "Juego propio · MapleStory Worlds (Nexon) · 2025",
+      "rol": "Desarrolladora",
+      "parrafos": [
+        "Un juego de acción bullet heaven para la plataforma MapleStory Worlds: el jugador viaja por distintas eras, esquiva oleadas de enemigos y sube de nivel sus habilidades con artefactos para restaurar la línea temporal.",
+        "Lo desarrollamos en Dragonark Studios dentro del MapleStory Worlds Creators' Workshop de Nexon America, un programa selectivo de 12 semanas, y se publicó en diciembre de 2025."
+      ],
+      "apps": [
+        "MapleStory Worlds"
+      ],
+      "enlaces": [
+        [
+          "Juégalo en MapleStory Worlds",
+          "https://maplestoryworlds.nexon.com/en/play/3d6a207cc3444ceaa73492c0fd49bfeb/"
+        ]
+      ]
+    },
+    {
+      "id": "mythpets",
+      "titulo": "Myth Pets y SodaRocket Challenge",
+      "tipo": "Juegos propios · Google Play · 2019 y 2020",
+      "rol": "Desarrolladora independiente",
+      "parrafos": [
+        "Antes de Dragonark publiqué por mi cuenta dos títulos comerciales en Android, SodaRocket Challenge (2019) y Myth Pets (2020), encargándome del diseño, el desarrollo, las pruebas y la publicación en la tienda."
+      ],
+      "apps": [
+        "Unity",
+        "C#",
+        "Android"
+      ],
+      "video": "https://www.youtube.com/watch?v=yEkY36VHkOU"
+    }
+  ]
+}
