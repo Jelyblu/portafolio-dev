@@ -21,11 +21,11 @@
     "bloques": [
       {
         "titulo": "AI & automation",
-        "texto": "An agentic bot on a local large language model that classifies natural-language bug reports and files them by priority, plus retrieval-augmented generation flows running in production on the OpenAI API: document retrieval and prompt design."
+        "texto": "An agentic bot on a local large language model, plus retrieval-augmented generation flows running in production on the OpenAI API: document retrieval and prompt design."
       },
       {
         "titulo": "CI/CD & backend",
-        "texto": "CI/CD pipelines on GitHub Actions and Google Cloud Build that run automated tests before every deploy. Serverless backends on Firebase Cloud Functions and AWS Lambda: REST endpoints, server-side validation and idempotent writes. Web hardening with CSP, HSTS and COOP."
+        "texto": "CI/CD pipelines on GitHub Actions and Google Cloud Build with continuous deployment. Serverless backends on Firebase Cloud Functions and AWS Lambda: REST endpoints, server-side validation and idempotent writes. Web hardening with CSP, HSTS and COOP."
       }
     ]
   },
@@ -58,7 +58,7 @@
       "rol": "Lead developer and level designer",
       "parrafos": [
         "I built a custom Fortnite island with four interconnected minigames: a time-trial race, an escape room, parkour challenges and a final boss battle against a mad scientist and his minions, tying mechanics and progression to the narrative goal of recovering the Formula X.",
-        "I ran the full development and level design, then led the testing that kept the island stable through a worldwide event."
+        "I ran the full development and level design for a worldwide event."
       ],
       "apps": [
         "UEFN",
@@ -97,7 +97,7 @@
       "tipo": "VRChat · virtual venue for Visa events and product launches",
       "rol": "Developer",
       "parrafos": [
-        "An immersive virtual space for Visa to host live events: I optimized the 3D assets and scene performance, refined the interactive systems, and ran the testing that kept the venue stable and smooth with an audience inside it."
+        "An immersive virtual space for Visa to host live events: I optimized the 3D assets and scene performance and refined the interactive systems so the venue stayed stable and smooth with an audience inside it."
       ],
       "apps": [
         "VRChat",
@@ -182,7 +182,7 @@
       "tipo": "Own games · Google Play · 2019 and 2020",
       "rol": "Independent developer",
       "parrafos": [
-        "Before Dragonark I self-published two commercial Android titles, SodaRocket Challenge (2019) and Myth Pets (2020), handling design, development, testing and store release on my own."
+        "Before Dragonark I self-published two commercial Android titles, SodaRocket Challenge (2019) and Myth Pets (2020), handling design, development and store release on my own."
       ],
       "apps": [
         "Unity",
